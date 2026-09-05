@@ -1,14 +1,5 @@
 <!--
   SPIDER-ID CARD — weave your own suit.
-
-  RULES
-  1. Rename this file to <your-github-username>.html
-  2. Internal CSS only — keep it inside the <style> block below.
-  3. No <script> tags. They are stripped and CI will reject them.
-  4. Everything must fit inside 320 x 440. That's the card.
-  5. Keep the four data- attributes on .spider-card — the roster reads them.
-
-  Everything else is yours. Go wild.
 -->
 <div
   class="spider-card"
@@ -84,6 +75,12 @@
       box-shadow: 0 0 22px rgba(230, 36, 41, 0.5), 0 0 0 4px rgba(51, 230, 199, 0.08);
       flex-shrink: 0;
       overflow: hidden;
+      animation: avatarPulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes avatarPulse {
+      0%, 100% { box-shadow: 0 0 22px rgba(230, 36, 41, 0.5), 0 0 0 4px rgba(51, 230, 199, 0.08); }
+      50% { box-shadow: 0 0 32px rgba(230, 36, 41, 0.8), 0 0 0 6px rgba(51, 230, 199, 0.16); }
     }
 
     .avatar svg {
@@ -190,7 +187,35 @@
       padding-top: 10px;
       z-index: 1;
     }
+
+    /* ── New: corner ribbon badge ───────────────────────────── */
+    .corner-ribbon {
+      position: absolute;
+      top: 18px;
+      right: -34px;
+      width: 130px;
+      padding: 3px 0;
+      text-align: center;
+      transform: rotate(45deg);
+      background: linear-gradient(90deg, var(--suit), #ff6b6b);
+      color: #fff;
+      font-family: ui-monospace, monospace;
+      font-size: 9px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px rgba(230, 36, 41, 0.7);
+      z-index: 2;
+      animation: ribbonGlow 2.4s ease-in-out infinite;
+    }
+
+    @keyframes ribbonGlow {
+      0%, 100% { box-shadow: 0 0 10px rgba(230, 36, 41, 0.7); }
+      50% { box-shadow: 0 0 18px rgba(230, 36, 41, 1); }
+    }
   </style>
+
+  <div class="corner-ribbon">Verified</div>
 
   <div class="top-row">
     <!-- Hand-drawn cyberpunk monkey avatar, no external image needed -->

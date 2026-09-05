@@ -1,13 +1,10 @@
 {
-<<<<<<< HEAD
   "name": "compPal",
   "alias": "Shaktiman",
   "skills": ["Lightning speed", "Max Armour", "Supreme"],
-=======
   "name": "kirumon",
   "alias": "Kirmada",
   "skills": ["dust misking", "shaping transfaming", "infinitisimal big"],
->>>>>>> symbiote
   "suitColor": "#E62429",
   "githubUsername": "DhruvPal2510"
 }
